@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="url(#accent)" stroke-width="3" stroke-opacity="0.4"/>
+  <circle cx="256" cy="180" r="140" fill="url(#glow)"/>
+
+  <!-- Monitor / Device Frame -->
+  <g filter="url(#shadow)">
+    <!-- Screen body -->
+    <rect x="116" y="110" width="280" height="180" rx="20" fill="#0f172a" stroke="url(#accent)" stroke-width="6"/>
+    <!-- Screen inner display -->
+    <rect x="130" y="124" width="252" height="152" rx="12" fill="#1e293b"/>
+    <!-- Stand -->
+    <path d="M 236 290 L 220 340 L 292 340 L 276 290 Z" fill="#334155"/>
+    <rect x="196" y="336" width="120" height="12" rx="6" fill="#475569"/>
+
+    <!-- Screen Content: Code / Graduation / Sparkle -->
+    <!-- Graduation Cap / Book Symbol inside Screen -->
+    <path d="M 256 148 L 320 180 L 256 212 L 192 180 Z" fill="url(#accent)"/>
+    <path d="M 216 195 L 216 230 C 216 244 296 244 296 230 L 296 195" fill="none" stroke="#e0e7ff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="320" y1="180" x2="320" y2="225" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="320" cy="228" r="5" fill="#facc15"/>
+  </g>
+
+  <!-- Bold DCA Badge at Bottom -->
+  <g filter="url(#shadow)">
+    <rect x="116" y="366" width="280" height="76" rx="22" fill="url(#accent)"/>
+    <text x="256" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="6">DCA</text>
+  </g>
+</svg>
